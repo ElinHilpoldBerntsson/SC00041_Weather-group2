@@ -1,11 +1,14 @@
 # Install required packages if not already installed
-install.packages("ggplot2")
-install.packages("dplyr")
-install.packages("readr")
+if (!require("ggplot2")) install.packages("ggplot2", repos = "https://cloud.r-project.org")
+if (!require("dplyr")) install.packages("dplyr", repos = "https://cloud.r-project.org")
+if (!require("readr")) install.packages("readr", repos = "https://cloud.r-project.org")
 
 library(ggplot2)
 library(dplyr)
 library(readr)
+
+# Create output folder if it doesn't exist
+dir.create("output", showWarnings = FALSE)
 
 # Read the CSV file
 weather <- read_csv("data/weather_data.csv")

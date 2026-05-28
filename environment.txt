@@ -1,0 +1,5 @@
+# Required R packages for running plot_weather.R
+R >= 4.0
+ggplot2
+dplyr
+readr
