@@ -1,7 +1,3 @@
-# Install required packages if not already installed
-if (!require("ggplot2")) install.packages("ggplot2", repos = "https://cloud.r-project.org")
-if (!require("dplyr")) install.packages("dplyr", repos = "https://cloud.r-project.org")
-if (!require("readr")) install.packages("readr", repos = "https://cloud.r-project.org")
 
 library(ggplot2)
 library(dplyr)
@@ -29,5 +25,6 @@ ggplot(weather, aes(x = Month)) +
   labs(x = "Month", fill = "", color = "") +
   theme_minimal() +
   theme(axis.text.x = element_text(angle = 45, hjust = 1))
+
 # Save the plot as a PNG file in the output folder
 ggsave("output/weather_plot.png", width = 10, height = 6, dpi = 300)
