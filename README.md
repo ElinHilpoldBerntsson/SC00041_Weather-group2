@@ -124,64 +124,8 @@ The plot shows:
 - average temperature as points and lines;
 - separate panels for each year.
 
-## Updating the environment
 
-If `environment.yml` is changed later, update the environment with:
-
-```bash
-conda env update -f environment.yml --prune
-```
-
-## Removing the environment
-
-To remove the environment, run:
-
-```bash
-conda env remove -n weathergroup2
-```
-
-## Alternative installation without conda
-
-If conda is not available, the packages can be installed manually in R:
-
-```r
-install.packages("ggplot2")
-install.packages("dplyr")
-install.packages("readr")
-```
-
-However, using `environment.yml` is preferred because it makes the project easier to reproduce.
-
-## Troubleshooting
-
-### The script cannot find the data file
-
-Make sure the CSV file is located here:
-
-```text
-data/weather_data.csv
-```
-
-Also make sure you are running the script from the main repository folder.
-
-### A package is missing
-
-Activate the environment again:
-
-```bash
-conda activate weathergroup2
-```
-
-Then check the packages:
-
-```bash
-Rscript -e "library(ggplot2); library(dplyr); library(readr)"
-```
-
-### The output folder is missing
-
-The script creates the `output/` folder automatically.
-
-## Authors
-
-Group 2
+git status
+git add README.md
+git commit -m "Update README with environment instructions"
+git push
